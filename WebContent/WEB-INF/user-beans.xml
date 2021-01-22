@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:context="http://www.springframework.org/schema/context"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="
+   http://www.springframework.org/schema/beans     
+   http://www.springframework.org/schema/beans/spring-beans-3.0.xsd
+   http://www.springframework.org/schema/context 
+   http://www.springframework.org/schema/context/spring-context-3.0.xsd">
+
+	<context:component-scan base-package="com.itafin" />
+	<context:annotation-config />
+	
+<!-- create service beans -->
+ 	<bean id="addressValidationService" class="com.itafin.addressvalidation.service.AddressValidationServiceImpl" /> 
+ 	<bean id="expressAddr" class="com.itafin.addressvalidation.express.ExpressAddrImpl" /> 
+ 	<bean id="personatorAddr" class="com.itafin.addressvalidation.personator.PersonatorAddrImpl" /> 
+ 	<bean id="boeService" class="com.itafin.boe.geo.BoeWebServiceImpl" /> 
+
+<!-- create DAO beans -->
+<!-- 	<bean id="WebEmailAddressDao" class="com.itafin.emailsubscription.dao.WebEmailAddressDaoImpl" /> -->
+	
+<!-- 	<bean id="jdbcTemplate" class="org.springframework.jdbc.core.JdbcTemplate"> -->
+<!-- 		<property name="dataSource" ref="datasource" /> -->
+<!-- 	</bean> -->
+
+<!--  Option 1 Uncomment to Run on JBoss Server -->		
+<!-- 	<bean id="datasource" class="org.springframework.jndi.JndiObjectFactoryBean" lazy-init="false">	 -->
+<!-- 		<property name="jndiName" value="java:/LATAXDS" /> -->
+<!--     </bean> -->
+ 
+<!--  Option 2 Uncomment to Run on Apache Tomcat Server    -->            
+<!-- 	<bean id="datasource" -->
+<!-- 		class="org.springframework.jdbc.datasource.DriverManagerDataSource"> -->
+<!-- 		<property name="driverClassName" value="oracle.jdbc.driver.OracleDriver" /> -->
+<!-- 		<property name="url" value="jdbc:oracle:thin:@oofdtaxp10:1521:LTXSYT16" /> -->
+<!-- 		<property name="username" value="latax" /> -->
+<!-- 		<property name="password" value="youEnter" /> -->
+<!-- 	</bean> -->
+	
+
+
+</beans>

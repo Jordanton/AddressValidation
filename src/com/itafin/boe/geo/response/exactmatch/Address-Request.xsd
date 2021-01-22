@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8"?>
+   <xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema" elementFormDefault="qualified" attributeFormDefault="unqualified">
+         <!-- XML Schema Generated from XML Document on Wed Jan 10 2018 12:32:05 GMT-0800 (Pacific Standard Time) -->
+         <!-- with XmlGrid.net Free Online Service http://xmlgrid.net -->
+         <xs:element name="Address-Request">
+               <xs:complexType>
+                     <xs:sequence>
+                           <xs:element name="qWhat" type="xs:string"></xs:element>
+                           <xs:element name="status" type="xs:string"></xs:element>
+                           <xs:element name="coordinates" type="xs:string"></xs:element>
+                           <xs:element name="address-geocode" type="xs:string"></xs:element>
+                           <xs:element name="layers">
+                                 <xs:complexType>
+                                       <xs:sequence>
+                                             <xs:element name="layer" maxOccurs="unbounded">
+                                                   <xs:complexType>
+                                                         <xs:sequence>
+                                                               <xs:element name="name" type="xs:string"></xs:element>
+                                                               <xs:element name="fields">
+                                                                     <xs:complexType>
+                                                                           <xs:sequence>
+                                                                                 <xs:element name="field" type="xs:string"></xs:element>
+                                                                           </xs:sequence>
+                                                                     </xs:complexType>
+                                                               </xs:element>
+                                                         </xs:sequence>
+                                                   </xs:complexType>
+                                             </xs:element>
+                                       </xs:sequence>
+                                 </xs:complexType>
+                           </xs:element>
+                     </xs:sequence>
+               </xs:complexType>
+         </xs:element>
+   </xs:schema>

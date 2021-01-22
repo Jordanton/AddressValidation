@@ -1,0 +1,24 @@
+
+h3 {
+	font-family: 'Roboto Condensed', serif;
+}
+
+p{
+	font-family: 'Lato', serif;
+}
+
+.page {
+	height: 120px;
+	 margin-top: 0px;
+}
+
+.notification {
+	padding-top: 0px;
+	text-align: center;
+}
+
+.emailSubscriptionGroup {
+	padding-top: 0px;
+	width: 90%;
+	margin: auto;
+}
